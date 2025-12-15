@@ -19,9 +19,9 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-    - name: Build and Push Docker Image
+    - name: Build and Push Docker image
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/python-docker-ci:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/pythondocker:latest
